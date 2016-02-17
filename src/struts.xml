@@ -7,13 +7,16 @@
 
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
-
-    <package name="onlineReading" namespace="/onlineReading" extends="struts-default">
-		<action name="Main">
-			<result>/Main.jsp</result>
+	
+    <package name="main" namespace="/Main" extends="struts-default">
+		<action name="Index">
+			<result>/index.jsp</result>
+		</action>
+		<action name="About">
+			<result>/about.jsp</result>
 		</action>
     </package>
-
+	
     <!-- Add packages here -->
 
 </struts>
