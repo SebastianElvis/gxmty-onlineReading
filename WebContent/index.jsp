@@ -15,20 +15,20 @@
     <title>Modern Business - Start Bootstrap Template</title>
 	
 	<!-- Bootstrap Core CSS -->
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	
 	<!-- Custom CSS -->
-	<link href="/css/modern-business.css" rel="stylesheet">
+	<link href="./css/modern-business.css" rel="stylesheet">
 	
 	<!-- Custom Fonts -->
-	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
     
     <!--  Navigation Bar -->
-    <s:include value="/templates/navigation.html"/>
+    <s:include value="./templates/navigation.html"/>
 
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
@@ -195,16 +195,16 @@
         <hr>
 
         <!-- Footer -->
-        <s:include value="/templates/footer.html" />
+        <s:include value="./templates/footer.html" />
 
     </div>
     <!-- /.container -->
     
 	<!-- jQuery -->
-	<script src="/js/jquery.js"></script>
+	<script src="./js/jquery.js"></script>
 	
 	<!-- Bootstrap Core JavaScript -->
-	<script src="/js/bootstrap.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
