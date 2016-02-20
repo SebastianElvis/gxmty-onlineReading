@@ -5,16 +5,23 @@
 
 <struts>
 
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
 	
     <package name="main" namespace="/Main" extends="struts-default">
-		<action name="Index">
+		<action name="Index" class="main.Index" method="execute">
 			<result>/index.jsp</result>
 		</action>
 		<action name="About">
 			<result>/about.jsp</result>
 		</action>
+		<action name="Contact">
+			<result>/contact.jsp</result>
+		</action>
+    </package> 
+    <package name="reading" namespace="/Reading" extends="struts-default">
+    	<action name="List">
+    		<result>/list.jsp</result>
+    	</action>
     </package>
 	
     <!-- Add packages here -->
