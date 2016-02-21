@@ -15,13 +15,13 @@
     <title>Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="/gxmty/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link href="./css/modern-business.css" rel="stylesheet">
+    <link href="/gxmty/css/modern-business.css" rel="stylesheet">
     
     <!-- Custom Fonts -->
-    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/gxmty/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,6 +56,11 @@
         <!-- /.row -->
 
         <!-- Project One -->
+        <div class="row">
+        	<span id="decodedUri">
+        		<s:property value="decodedUri"/>
+        	</span>
+        </div>
         <div class="row">
             <div class="col-md-7">
                 <div>
@@ -111,18 +116,18 @@
         <hr>
 
         <!-- Footer -->
-        <s:include value="./templates/footer.html" />
+        <s:include value="/gxmty/templates/footer.html" />
 
     </div>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="/gxmty/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/gxmty/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="./js/pdf.js"></script>
+    <script type="text/javascript" src="/gxmty/js/pdf.js"></script>
     <script type="text/javascript">
     //
     // NOTE: 
@@ -130,7 +135,9 @@
     // security restrictions, we have to use a file server with special headers
     // (CORS) - most servers don't support cross-origin browser requests.
     //
-    var url = './pdf/test.pdf';
+    
+    
+    var url = $("#decodedUri").val();
     
     //
     // Disable workers to avoid yet another cross-origin issue (workers need the URL of

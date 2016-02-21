@@ -17,12 +17,13 @@
 		<action name="Contact">
 			<result>/contact.jsp</result>
 		</action>
-    </package> 
-    <package name="reading" namespace="/Reading" extends="struts-default">
-    	<action name="List">
+		<action name="List" class="main.List" method="execute">
     		<result>/list.jsp</result>
     	</action>
-    </package>
+    	<action name="Reading" class="main.Reading" method="execute">
+    		<result>/reading.jsp</result>
+    	</action>
+    </package> 
 	
     <!-- Add packages here -->
 

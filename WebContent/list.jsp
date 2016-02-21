@@ -18,9 +18,29 @@
 </head>
 
 <body>
-	
-	<s:property value="uri" />
-	
+	<ul>
+	<s:iterator value="fileArrayList">
+		<s:if test="isFile()==true">
+			<li>
+				<s:a href="./Reading?uri=%{uri}/%{getName()}" >
+					<s:property value="getName()" />
+				</s:a>
+			</li>
+		</s:if>
+		<s:elseif test="isDirectory()==true">
+			<li>
+				<s:a href="./List?originalUri=%{uri}/%{getName()}" >
+					<s:property value="getName()" />
+				</s:a>
+			</li>
+		</s:elseif>
+	</s:iterator>
+	</ul>
+	<script>   
+		for(var i=0;i<document.links.length;i++){   
+		document.links[i].href=encodeURI(document.links[i].href);   
+		}   
+	</script>   
 	<!-- jQuery -->
 	<script src="/gxmty/js/jquery.js"></script>
 	
