@@ -15,20 +15,20 @@
     <title>Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/gxmty/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!-- Custom CSS -->
-	<link href="/css/modern-business.css" rel="stylesheet">
+	<link href="/gxmty/css/modern-business.css" rel="stylesheet">
 	
 	<!-- Custom Fonts -->
-	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/gxmty/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <s:include value="./templates/navigation.html"/>
+    <s:include value="/templates/navigation.html"/>
 
     <!-- Page Content -->
     <div class="container">
@@ -213,16 +213,16 @@
         <hr>
 
         <!-- Footer -->
-        <s:include value="./templates/footer.html"/>
+        <s:include value="/templates/footer.html"/>
 
     </div>
     <!-- /.container -->
 
     <!-- jQuery -->
-	<script src="/js/jquery.js"></script>
+	<script src="/gxmty/js/jquery.js"></script>
 	
 	<!-- Bootstrap Core JavaScript -->
-	<script src="/js/bootstrap.min.js"></script>
+	<script src="/gxmty/js/bootstrap.min.js"></script>
 
 </body>
 

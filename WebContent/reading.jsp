@@ -29,7 +29,22 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	<style type="text/css">
+		#the-pdf{
+			width:100%;
+		}
+		
+		#prev{
+			float:left;
+		}
+		#next{
+			float:right;
+		}
+		#page{
+			text-align:center;
+			position:relative;
+		}
+	</style>
 </head>
 
 <body>
@@ -62,53 +77,20 @@
         	</span>
         </div>
         <div class="row">
-            <div class="col-md-7">
+        
+            <div class="col-md-8">
                 <div>
-                    <button id="prev" onClick="goPrevious()">Previous</button>
-                    <button id="next" onClick="goNext()">Next</button>
-                    &nbsp; &nbsp;
-                    <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+                	<h5 id="page">Page: <span id="page_num"></span> / <span id="page_count"></span></h5>
+                    <button id="prev" class="btn btn-primary" onClick="goPrevious()">←</button>
+                    <button id="next" class="btn btn-primary" onClick="goNext()">→</button>
                 </div>
-                <canvas id="the-canvas" style="border:1px solid black"></canvas>
+                <canvas id="the-pdf" style="border:1px solid black"></canvas>
             </div>
-            <div class="col-md-5">
-                <h3>Project One</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-                <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-
-        <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
+            
+            <div class="col-md-4">
+                <h3>Notes</h3>
+                <h4>Make notes as you wish</h4>
+                <p></p>
             </div>
         </div>
         <!-- /.row -->
@@ -116,7 +98,7 @@
         <hr>
 
         <!-- Footer -->
-        <s:include value="/gxmty/templates/footer.html" />
+        <s:include value="templates/footer.html" />
 
     </div>
     <!-- /.container -->
@@ -137,7 +119,8 @@
     //
     
     
-    var url = $("#decodedUri").val();
+    //var url = $("#decodedUri").val();
+    var url = '/gxmty/test.pdf';
     
     //
     // Disable workers to avoid yet another cross-origin issue (workers need the URL of
@@ -148,7 +131,7 @@
     var pdfDoc = null,
         pageNum = 1,
         scale = 1.5,
-        canvas = document.getElementById('the-canvas'),
+        canvas = document.getElementById('the-pdf'),
         ctx = canvas.getContext('2d');
 
     //

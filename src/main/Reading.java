@@ -27,7 +27,7 @@ public class Reading extends ActionSupport{
 	}
 
 	public String execute() throws Exception{
-		decodedUri = URLDecoder.decode(uri, "UTF-8");
+		//decodedUri = URLDecoder.decode(uri, "UTF-8");
 		return SUCCESS;
 	}
 }
